@@ -14,10 +14,11 @@
     <meta name="csrf-token" content="QAP3wPymiRMc0tiPaXPfmLz7O4BLyJ&#47;jt+cKm3B8JMo=">
 
     <link rel="stylesheet" href="css/vendor/normalize-2.1.3.css">
+    <link rel="stylesheet" href="css/master.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-    <header id="masthead">
+    <header>
         <h1>Hireology</h1>
         <nav>
             <ul>
@@ -41,182 +42,201 @@
             <input type="text" placeholder="Search Jobs &amp; Candidates&hellip;">
         </form>
     </header>
-
-    <h2>Salary Report</h2>
-    <p>PayScale has collected over 36 million salary profiles providing updatetd compensation data for over 14,000 unique job titles. Enter the details of the position you'd like to price in order to receive your PayScale report: <a href="/files/PayScale_Sample_Report_Account_Manager.pdf" target="_blank">View Sample</a>.</p>
-    <form action="/payscale_reports" method="post">
-        <input name="utf8" type="hidden" value="&#x2713;" />
-        <input name="authenticity_token" type="hidden" value="QAP3wPymiRMc0tiPaXPfmLz7O4BLyJ/jt+cKm3B8JMo=" />
-        <input id="suggested_jobs" name="suggested_jobs" type="hidden" />
-        <label>Employer Type</label>
-        <select id="payscale_report_employer_type" name="payscale_report[employer_type]">
-            <option value="">Please select&hellip;</option>
-            <option value="Not Specified">Not Specified</option>
-            <option value="Company">Company</option>
-            <option value="College / University">College / University</option>
-            <option value="Government - Federal">Government - Federal</option>
-            <option value="Government - State &amp; Local">Government - State &amp; Local</option>
-            <option value="Hospital">Hospital</option>
-            <option value="Non-Profit Organization">Non-Profit Organization</option>
-            <option value="Private Practice/Firm">Private Practice/Firm</option>
-            <option value="School / School District">School / School District</option>
-        </select>
-        <label>Number of Employees</label>
-        <input id="payscale_report_company_size" name="payscale_report[company_size]" size="30" type="number" value="" />
-        <label>Industry</label>
-        <select id="payscale_report_industry" name="payscale_report[industry]">
-            <option value="">Please select&hellip;</option>
-            <option value="Accounting / Auditing Firm">Accounting / Auditing Firm</option>
-            <option value="Aerospace and Defense">Aerospace and Defense</option>
-            <option value="Architecture">Architecture</option>
-            <option value="Automotive Dealership">Automotive Dealership</option>
-            <option value="Banking">Banking</option>
-            <option value="Biotechnology">Biotechnology</option>
-            <option value="Child Care / Day Care">Child Care / Day Care</option>
-            <option value="Commercial Aviation / Airline">Commercial Aviation / Airline</option>
-            <option value="Commercial Printing">Commercial Printing</option>
-            <option value="Construction">Construction</option>
-            <option value="Consultancy">Consultancy</option>
-            <option value="Education">Education</option>
-            <option value="Energy / Utilities">Energy / Utilities</option>
-            <option value="Engineering Consulting">Engineering Consulting</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Financial Services">Financial Services</option>
-            <option value="Food Manufacturing">Food Manufacturing</option>
-            <option value="Food Service">Food Service</option>
-            <option value="Government">Government</option>
-            <option value="Hair and Beauty Salons">Hair and Beauty Salons</option>
-            <option value="Health Care Services">Health Care Services</option>
-            <option value="Hospitals">Hospitals</option>
-            <option value="Hotel / Hotels">Hotel / Hotels</option>
-            <option value="Human Resources Consulting Services">Human Resources Consulting Services</option>
-            <option value="Information Technology (IT) Services">Information Technology (IT) Services</option>
-            <option value="Insurance">Insurance</option>
-            <option value="Law Enforcement">Law Enforcement</option>
-            <option value="Law Firm / Law Office">Law Firm / Law Office</option>
-            <option value="Legal Services">Legal Services</option>
-            <option value="Logistic Services">Logistic Services</option>
-            <option value="Manufacturing and Distribution">Manufacturing and Distribution</option>
-            <option value="Marketing, Advertising &amp; Media Management">Marketing, Advertising &amp; Media Management</option>
-            <option value="Medical Office">Medical Office</option>
-            <option value="Nursing Home">Nursing Home</option>
-            <option value="Pharmaceuticals">Pharmaceuticals</option>
-            <option value="Pharmacy">Pharmacy</option>
-            <option value="Project Management">Project Management</option>
-            <option value="Public Safety">Public Safety</option>
-            <option value="Publishing">Publishing</option>
-            <option value="Real Estate">Real Estate</option>
-            <option value="Religion">Religion</option>
-            <option value="Retail">Retail</option>
-            <option value="Retail/Wholesale Distribution">Retail/Wholesale Distribution</option>
-            <option value="Social Services">Social Services</option>
-            <option value="Software Development">Software Development</option>
-            <option value="Telecommunicaitons">Telecommunicaitons</option>
-            <option value="Television Broadcasting">Television Broadcasting</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Travel">Travel</option>
-            <option value="Veterinary Care">Veterinary Care</option>
-        </select>
-        <label>Job Title</label>
-        <input id="payscale_report_job_title" name="payscale_report[job_title]" required="required" size="30" type="text" value="" />
-        <label>City</label>
-        <input id="payscale_report_city" name="payscale_report[city]" required="required" size="30" type="text" value="" />
-        <label>State/Province</label>
-        <select id="payscale_report_state_id" name="payscale_report[state_id]">
-            <option value="">Please select&hellip;</option>
-            <option value="1">AL</option>
-            <option value="2">AK</option>
-            <option value="3">AZ</option>
-            <option value="4">AR</option>
-            <option value="5">CA</option>
-            <option value="6">CO</option>
-            <option value="7">CT</option>
-            <option value="8">DE</option>
-            <option value="9">DC</option>
-            <option value="10">FL</option>
-            <option value="11">GA</option>
-            <option value="12">HI</option>
-            <option value="13">ID</option>
-            <option value="14">IL</option>
-            <option value="15">IN</option>
-            <option value="16">IA</option>
-            <option value="17">KS</option>
-            <option value="18">KY</option>
-            <option value="19">LA</option>
-            <option value="20">ME</option>
-            <option value="21">MD</option>
-            <option value="22">MA</option>
-            <option value="23">MI</option>
-            <option value="24">MN</option>
-            <option value="25">MS</option>
-            <option value="26">MO</option>
-            <option value="27">MT</option>
-            <option value="28">NE</option>
-            <option value="29">NV</option>
-            <option value="30">NH</option>
-            <option value="31">NJ</option>
-            <option value="32">NM</option>
-            <option value="33">NY</option>
-            <option value="34">NC</option>
-            <option value="35">ND</option>
-            <option value="36">OH</option>
-            <option value="37">OK</option>
-            <option value="38">OR</option>
-            <option value="39">PA</option>
-            <option value="40">RI</option>
-            <option value="41">SC</option>
-            <option value="42">SD</option>
-            <option value="43">TN</option>
-            <option value="44">TX</option>
-            <option value="45">UT</option>
-            <option value="46">VT</option>
-            <option value="47">VA</option>
-            <option value="48">WA</option>
-            <option value="49">WV</option>
-            <option value="50">WI</option>
-            <option value="51">WY</option>
-            <option value="52">--</option>
-            <option value="53">AB</option>
-            <option value="54">BC</option>
-            <option value="55">MB</option>
-            <option value="56">NB</option>
-            <option value="57">NL</option>
-            <option value="58">NT</option>
-            <option value="59">NS</option>
-            <option value="60">NU</option>
-            <option value="61">ON</option>
-            <option value="62">PE</option>
-            <option value="63">QC</option>
-            <option value="64">SK</option>
-            <option value="65">YT</option>
-            <option value="66">--</option>
-        </select>
-        <label>Years of Experience in Field/Career</label>
-        <p>Estimate the total years of experience in the field your desired candidate would have.</p>
-        <input id="payscale_report_years_of_experience" maxlength="3" name="payscale_report[years_of_experience]" size="3" type="number" value="" />
-        <p>Email address where complete PayScale report should be sent:</p>
-        <label>Email Address*</label>
-        <input id="payscale_report_email_address" name="payscale_report[email_address]" required="required" size="30" type="email" value="admin@hireology.com" />
-        <div>
-            <a href="/jobs/new" class="cancel-link">Cancel</a>
-            <button type="submit" id="submit_button">Continue</button>
-        </div>
-    </form>
-    <h2>Order Summary</h2>
-    <table>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>PayScale Job Report</td>
-                <td>$179.95</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Total charge:</td>
-                <td>$179.95</td>
-            </tr>
-        </tbody>
-    </table>
+    <main>
+        <h2>Salary Report</h2>
+        <p>PayScale has collected over 36 million salary profiles providing updatetd compensation data for over 14,000 unique job titles. Enter the details of the position you'd like to price in order to receive your PayScale report: <a href="/files/PayScale_Sample_Report_Account_Manager.pdf" target="_blank">View Sample</a>.</p>
+        <form action="/payscale_reports" method="post">
+            <input name="utf8" type="hidden" value="&#x2713;" />
+            <input name="authenticity_token" type="hidden" value="QAP3wPymiRMc0tiPaXPfmLz7O4BLyJ/jt+cKm3B8JMo=" />
+            <input id="suggested_jobs" name="suggested_jobs" type="hidden" />
+            <div>
+                <label for="payscale_report_employer_type">Employer Type</label>
+                <select id="payscale_report_employer_type" name="payscale_report[employer_type]">
+                    <option value="">Please select&hellip;</option>
+                    <option value="Not Specified">Not Specified</option>
+                    <option value="Company">Company</option>
+                    <option value="College / University">College / University</option>
+                    <option value="Government - Federal">Government - Federal</option>
+                    <option value="Government - State &amp; Local">Government - State &amp; Local</option>
+                    <option value="Hospital">Hospital</option>
+                    <option value="Non-Profit Organization">Non-Profit Organization</option>
+                    <option value="Private Practice/Firm">Private Practice/Firm</option>
+                    <option value="School / School District">School / School District</option>
+                </select>
+            </div>
+            <div>
+                <label for="payscale_report_company_size">Number of Employees</label>
+                <input id="payscale_report_company_size" name="payscale_report[company_size]" size="30" type="number" value="" />
+            </div>
+            <div>
+                <label for="payscale_report_industry">Industry</label>
+                <select id="payscale_report_industry" name="payscale_report[industry]">
+                    <option value="">Please select&hellip;</option>
+                    <option value="Accounting / Auditing Firm">Accounting / Auditing Firm</option>
+                    <option value="Aerospace and Defense">Aerospace and Defense</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Automotive Dealership">Automotive Dealership</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Biotechnology">Biotechnology</option>
+                    <option value="Child Care / Day Care">Child Care / Day Care</option>
+                    <option value="Commercial Aviation / Airline">Commercial Aviation / Airline</option>
+                    <option value="Commercial Printing">Commercial Printing</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Consultancy">Consultancy</option>
+                    <option value="Education">Education</option>
+                    <option value="Energy / Utilities">Energy / Utilities</option>
+                    <option value="Engineering Consulting">Engineering Consulting</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Financial Services">Financial Services</option>
+                    <option value="Food Manufacturing">Food Manufacturing</option>
+                    <option value="Food Service">Food Service</option>
+                    <option value="Government">Government</option>
+                    <option value="Hair and Beauty Salons">Hair and Beauty Salons</option>
+                    <option value="Health Care Services">Health Care Services</option>
+                    <option value="Hospitals">Hospitals</option>
+                    <option value="Hotel / Hotels">Hotel / Hotels</option>
+                    <option value="Human Resources Consulting Services">Human Resources Consulting Services</option>
+                    <option value="Information Technology (IT) Services">Information Technology (IT) Services</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Law Enforcement">Law Enforcement</option>
+                    <option value="Law Firm / Law Office">Law Firm / Law Office</option>
+                    <option value="Legal Services">Legal Services</option>
+                    <option value="Logistic Services">Logistic Services</option>
+                    <option value="Manufacturing and Distribution">Manufacturing and Distribution</option>
+                    <option value="Marketing, Advertising &amp; Media Management">Marketing, Advertising &amp; Media Management</option>
+                    <option value="Medical Office">Medical Office</option>
+                    <option value="Nursing Home">Nursing Home</option>
+                    <option value="Pharmaceuticals">Pharmaceuticals</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="Project Management">Project Management</option>
+                    <option value="Public Safety">Public Safety</option>
+                    <option value="Publishing">Publishing</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Religion">Religion</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Retail/Wholesale Distribution">Retail/Wholesale Distribution</option>
+                    <option value="Social Services">Social Services</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Telecommunicaitons">Telecommunicaitons</option>
+                    <option value="Television Broadcasting">Television Broadcasting</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Veterinary Care">Veterinary Care</option>
+                </select>
+            </div>
+            <div>
+                <label for="payscale_report_job_title">Job Title</label>
+                <input id="payscale_report_job_title" name="payscale_report[job_title]" required="required" size="30" type="text" value="" />
+            </div>
+            <div>
+                <label for="payscale_report_city">City</label>
+                <input id="payscale_report_city" name="payscale_report[city]" required="required" size="30" type="text" value="" />
+            </div>
+            <div>
+                <label for="payscale_report_state_id">State/Province</label>
+                <select id="payscale_report_state_id" name="payscale_report[state_id]">
+                    <option value="">Please select&hellip;</option>
+                    <option value="1">AL</option>
+                    <option value="2">AK</option>
+                    <option value="3">AZ</option>
+                    <option value="4">AR</option>
+                    <option value="5">CA</option>
+                    <option value="6">CO</option>
+                    <option value="7">CT</option>
+                    <option value="8">DE</option>
+                    <option value="9">DC</option>
+                    <option value="10">FL</option>
+                    <option value="11">GA</option>
+                    <option value="12">HI</option>
+                    <option value="13">ID</option>
+                    <option value="14">IL</option>
+                    <option value="15">IN</option>
+                    <option value="16">IA</option>
+                    <option value="17">KS</option>
+                    <option value="18">KY</option>
+                    <option value="19">LA</option>
+                    <option value="20">ME</option>
+                    <option value="21">MD</option>
+                    <option value="22">MA</option>
+                    <option value="23">MI</option>
+                    <option value="24">MN</option>
+                    <option value="25">MS</option>
+                    <option value="26">MO</option>
+                    <option value="27">MT</option>
+                    <option value="28">NE</option>
+                    <option value="29">NV</option>
+                    <option value="30">NH</option>
+                    <option value="31">NJ</option>
+                    <option value="32">NM</option>
+                    <option value="33">NY</option>
+                    <option value="34">NC</option>
+                    <option value="35">ND</option>
+                    <option value="36">OH</option>
+                    <option value="37">OK</option>
+                    <option value="38">OR</option>
+                    <option value="39">PA</option>
+                    <option value="40">RI</option>
+                    <option value="41">SC</option>
+                    <option value="42">SD</option>
+                    <option value="43">TN</option>
+                    <option value="44">TX</option>
+                    <option value="45">UT</option>
+                    <option value="46">VT</option>
+                    <option value="47">VA</option>
+                    <option value="48">WA</option>
+                    <option value="49">WV</option>
+                    <option value="50">WI</option>
+                    <option value="51">WY</option>
+                    <option value="52">--</option>
+                    <option value="53">AB</option>
+                    <option value="54">BC</option>
+                    <option value="55">MB</option>
+                    <option value="56">NB</option>
+                    <option value="57">NL</option>
+                    <option value="58">NT</option>
+                    <option value="59">NS</option>
+                    <option value="60">NU</option>
+                    <option value="61">ON</option>
+                    <option value="62">PE</option>
+                    <option value="63">QC</option>
+                    <option value="64">SK</option>
+                    <option value="65">YT</option>
+                    <option value="66">--</option>
+                </select>
+            </div>
+            <div>
+                <label for="payscale_report_years_of_experience">Years of Experience in Field/Career<br>
+                <em>Estimate the total years of experience in the field your desired candidate would have.</em></label>
+                <input id="payscale_report_years_of_experience" maxlength="3" name="payscale_report[years_of_experience]" size="3" type="number" value="" />
+            </div>
+            <div>
+                <p>Email address where complete PayScale report should be sent:</p>
+                <label for="payscale_report_email_address">Email Address</label>
+                <input id="payscale_report_email_address" name="payscale_report[email_address]" required="required" size="30" type="email" value="admin@hireology.com" />
+            </div>
+            <div>
+                <a href="/jobs/new" class="cancel-link">Cancel</a>
+                <button type="submit" id="submit_button">Continue</button>
+            </div>
+        </form>
+    </main>
+    <aside>
+        <h2>Order Summary</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>PayScale Job Report</td>
+                    <td>$179.95</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Total charge:</td>
+                    <td>$179.95</td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 </body>
