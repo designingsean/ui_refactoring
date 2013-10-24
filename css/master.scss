@@ -2,10 +2,18 @@ $brand-primary: #4FCC00;
 
 $single-grid: 100%/12;
 
+$font-small: 0.85rem;
+$font-large: 1.2rem;
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+h1 {
+    color: $brand-primary;
+    font-weight: 100;
 }
 
 a {
@@ -23,57 +31,51 @@ label {
     position: relative;
 }
 
-header {
-    background-color: #f2f2f2;
-    height: 167px;
-    h1, ul {
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        color: $brand-primary;
-        font-weight: 100;
-        position: absolute;
-        top: 90px;
-    }
-    nav {
-        float: left;
-    }
-    ul {
-        list-style: none;
-    }
+#app-nav {
+    background-color: $brand-primary;
+    height: 40px;
+    padding: 12px 0;
+    -webkit-box-shadow: 0 0 4px #bbbbbb;
+       -moz-box-shadow: 0 0 4px #bbbbbb;
+            box-shadow: 0 0 4px #bbbbbb;
     a {
+        color: #fff;
         text-decoration: none;
     }
 }
 
 #main-nav {
-    background-color: #fff;
-    padding: 12px 0;
-    font-size: 80%;
-    width: $single-grid*4;
+    font-size: $font-small;
     text-align: center;
-    -webkit-box-shadow: 0 0 4px #bbbbbb;
-       -moz-box-shadow: 0 0 4px #bbbbbb;
-            box-shadow: 0 0 4px #bbbbbb;
+    float:left;
     a {
         text-align: center;
-        margin: 0 3%;
+        margin-right: 1.5rem;
+        display: block;
+        float: left;
     }
 }
 
 #search-nav {
-    width: $single-grid*3;
-    margin-left: $single-grid*4;
+    width: $single-grid*2;
     input {
         width: 100%;
     }
 }
 
 #settings-nav {
-    width: $single-grid;
-    ul {
+    float: right;
+    text-align: center;
+    font-size: $font-small;
+    nav {
         display: none;
+        background-color: #fff;
+        a {
+            display: block;
+        }
+    }
+    &:hover nav {
+        display: block;
     }
 }
 
