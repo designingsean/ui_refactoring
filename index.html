@@ -19,29 +19,31 @@
 </head>
 <body>
     <header>
-        <h1>Hireology</h1>
-        <nav>
-            <ul>
-                <li><a href="/welcome">Welcome</a></li>
-                <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/candidates">Candidates</a></li>
-                <li><a href="/tasks">Tasks</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <a href="/company_profiles/edit_company_profile">Settings</a>
-            <ul>
-                <li><a href="/company_profiles/edit_company_profile">Settings</a></li>
-                <li><a href="/company_profiles/my_info">My Info</a></li>
-                <li><a href="/accounts">Users</a></li>
-                <li><a href="/accounts/details">Account</a></li>
-                <li><a href="/sign_out">Sign Out</a></li>
-            </ul>
-        </nav>
-        <form action="">
-            <input type="text" placeholder="Search Jobs &amp; Candidates&hellip;">
-        </form>
-    </header>
+        <div class="container">
+            <h1>Hireology</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/welcome">Welcome</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/candidates">Candidates</a></li>
+                    <li><a href="/tasks">Tasks</a></li>
+                </ul>
+            </nav>
+            <nav id="settings-nav">
+                <a href="/company_profiles/edit_company_profile">Settings</a>
+                <ul>
+                    <li><a href="/company_profiles/edit_company_profile">Settings</a></li>
+                    <li><a href="/company_profiles/my_info">My Info</a></li>
+                    <li><a href="/accounts">Users</a></li>
+                    <li><a href="/accounts/details">Account</a></li>
+                    <li><a href="/sign_out">Sign Out</a></li>
+                </ul>
+            </nav>
+            <form action="">
+                <input type="text" placeholder="Search Jobs &amp; Candidates&hellip;">
+            </form>
+        </header>
+    </div>
     <main>
         <h2>Salary Report</h2>
         <p>PayScale has collected over 36 million salary profiles providing updatetd compensation data for over 14,000 unique job titles. Enter the details of the position you'd like to price in order to receive your PayScale report: <a href="/files/PayScale_Sample_Report_Account_Manager.pdf" target="_blank">View Sample</a>.</p>
