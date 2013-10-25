@@ -17,6 +17,13 @@ label {
   display: block;
   margin-bottom: 5px; }
 
+table {
+  font-size: 0.85rem;
+  width: 100%; }
+
+input, select {
+  width: 100%; }
+
 .container {
   width: 90%;
   max-width: 992px;
@@ -36,6 +43,57 @@ label {
   text-decoration: none;
   font-size: 0.85rem;
   padding: 12px; }
+
+.col-1 {
+  width: 8.33333%;
+  float: left; }
+
+.col-2 {
+  width: 16.66667%;
+  float: left; }
+
+.col-3 {
+  width: 25%;
+  float: left; }
+
+.col-4 {
+  width: 33.33333%;
+  float: left; }
+
+.col-5 {
+  width: 41.66667%;
+  float: left; }
+
+.col-6 {
+  width: 50%;
+  float: left; }
+
+.col-7 {
+  width: 58.33333%;
+  float: left; }
+
+.col-8 {
+  width: 66.66667%;
+  float: left; }
+
+.col-9 {
+  width: 75%;
+  float: left; }
+
+.col-10 {
+  width: 83.33333%;
+  float: left; }
+
+.col-11 {
+  width: 91.66667%;
+  float: left; }
+
+.col-12 {
+  width: 100%;
+  float: left; }
+
+.gutter {
+  margin-right: 8.33333%; }
 
 #app-nav {
   background-color: #4fcc00;
@@ -98,33 +156,19 @@ label {
   #settings-nav:hover nav {
     display: block; }
 
-main {
-  width: 66.66667%;
-  float: left; }
-  main input, main select {
-    border: 1px solid #ddd;
-    font-size: 0.85rem;
-    padding: 4px;
-    height: 30px; }
-  main .row {
-    clear: both;
-    margin-bottom: 1.5rem; }
-    main .row:before, main .row:after {
-      content: " ";
-      display: table; }
-    main .row:after {
-      clear: both; }
-    main .row .col {
-      width: 25%;
-      margin-right: 8.33333%;
-      float: left; }
-      main .row .col input, main .row .col select {
-        width: 100%; }
-
-aside {
-  width: 25%;
-  margin-left: 8.33333%;
-  float: left; }
+main input, main select {
+  border: 1px solid #ddd;
+  font-size: 0.85rem;
+  padding: 4px;
+  height: 30px; }
+main .row {
+  clear: both;
+  margin-bottom: 1.5rem; }
+  main .row:before, main .row:after {
+    content: " ";
+    display: table; }
+  main .row:after {
+    clear: both; }
 
 .cf:before, .cf:after {
   content: " ";

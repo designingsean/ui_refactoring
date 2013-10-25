@@ -42,6 +42,15 @@ label {
     margin-bottom: 5px;
 }
 
+table {
+    font-size: $font-small;
+    width: 100%;
+}
+
+input, select {
+    width: 100%;
+}
+
 .container {
     width: 90%;
     max-width: 992px;
@@ -66,6 +75,16 @@ label {
     padding: 12px;
 }
 
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: $single-grid * $i;
+        float: left;
+    }
+}
+
+.gutter {
+    margin-right: $single-grid;
+}
 
 //navigation
 #app-nav {
@@ -138,8 +157,6 @@ label {
 
 //main
 main {
-    width: $single-grid*8;
-    float: left;
     input, select {
         border: 1px solid #ddd;
         font-size: $font-small;
@@ -150,23 +167,10 @@ main {
         @include clearfix;
         clear: both;
         margin-bottom: $margin-default;
-        .col {
-            width: $single-grid*3;
-            margin-right: $single-grid;
-            float: left;
-            input, select {
-                width: 100%;
-            }
-        }
     }
 }
 
 //sidebar
-aside {
-    width: $single-grid*3;
-    margin-left: $single-grid;
-    float: left;
-}
 
 //helpers
 .cf {

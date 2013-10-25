@@ -44,7 +44,7 @@
     </header>
     <div class="container">
         <h1>Hireology</h1>
-        <main>
+        <main class="col-8 gutter">
             <h2>Salary Report</h2>
             <p>PayScale has collected over 36 million salary profiles providing updatetd compensation data for over 14,000 unique job titles. Enter the details of the position you'd like to price in order to receive your PayScale report: <a href="/files/PayScale_Sample_Report_Account_Manager.pdf" target="_blank">View Sample</a>.</p>
             <form action="/payscale_reports" method="post">
@@ -52,7 +52,7 @@
                 <input name="authenticity_token" type="hidden" value="QAP3wPymiRMc0tiPaXPfmLz7O4BLyJ/jt+cKm3B8JMo=" />
                 <input id="suggested_jobs" name="suggested_jobs" type="hidden" />
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3 gutter">
                         <label for="payscale_report_employer_type">Employer Type</label>
                         <select id="payscale_report_employer_type" name="payscale_report[employer_type]">
                             <option value="">Please select&hellip;</option>
@@ -67,11 +67,11 @@
                             <option value="School / School District">School / School District</option>
                         </select>
                     </div>
-                    <div class="col">
+                    <div class="col-3 gutter">
                         <label for="payscale_report_company_size">Number of Employees</label>
                         <input id="payscale_report_company_size" name="payscale_report[company_size]" size="30" type="number" value="" />
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                         <label for="payscale_report_industry">Industry</label>
                         <select id="payscale_report_industry" name="payscale_report[industry]">
                             <option value="">Please select&hellip;</option>
@@ -129,15 +129,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3 gutter">
                         <label for="payscale_report_job_title">Job Title</label>
                         <input id="payscale_report_job_title" name="payscale_report[job_title]" required="required" size="30" type="text" value="" />
                     </div>
-                    <div class="col">
+                    <div class="col-3 gutter">
                         <label for="payscale_report_city">City</label>
                         <input id="payscale_report_city" name="payscale_report[city]" required="required" size="30" type="text" value="" />
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                         <label for="payscale_report_state_id">State/Province</label>
                         <select id="payscale_report_state_id" name="payscale_report[state_id]">
                             <option value="">Please select&hellip;</option>
@@ -213,21 +213,21 @@
                 <div class="row">
                     <label for="payscale_report_years_of_experience">Years of Experience in Field/Career<br>
                     <em>Estimate the total years of experience in the field your desired candidate would have.</em></label>
-                    <input id="payscale_report_years_of_experience" maxlength="3" name="payscale_report[years_of_experience]" size="3" type="number" value="" />
+                    <input id="payscale_report_years_of_experience" class="col-2" maxlength="3" name="payscale_report[years_of_experience]" size="3" type="number" value="" />
                 </div>
                 <div class="row">
                     <label for="payscale_report_email_address">Email address where complete PayScale report should be sent</label>
-                    <input id="payscale_report_email_address" name="payscale_report[email_address]" required="required" size="30" type="email" value="admin@hireology.com" />
+                    <input id="payscale_report_email_address" class="col-4" name="payscale_report[email_address]" required="required" size="30" type="email" value="admin@hireology.com" />
                 </div>
                 <div class="row">
-                    <div class="col float-right">
+                    <div class="col-12">
+                        <button type="submit" id="submit_button" class="btn btn-primary">Continue</button>
                         <a href="/jobs/new" class="btn btn-cancel">Cancel</a>
-                        <button type="submit" id="submit_button" class="btn btn-primary float-right">Continue</button>
                     </div>
                 </div>
             </form>
         </main>
-        <aside>
+        <aside class="col-3">
             <h2>Order Summary</h2>
             <table>
                 <tbody>
