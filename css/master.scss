@@ -33,14 +33,14 @@ label {
 
 #app-nav {
     background-color: $brand-primary;
-    height: 40px;
-    padding: 12px 0;
     -webkit-box-shadow: 0 0 4px #bbbbbb;
        -moz-box-shadow: 0 0 4px #bbbbbb;
             box-shadow: 0 0 4px #bbbbbb;
     a {
         color: #fff;
         text-decoration: none;
+        padding: 18px 0;
+        display: inline-block;
     }
 }
 
@@ -51,27 +51,46 @@ label {
     a {
         text-align: center;
         margin-right: 1.5rem;
-        display: block;
-        float: left;
     }
 }
 
 #search-nav {
-    width: $single-grid*2;
+    width: $single-grid*3;
+    float: right;
     input {
-        width: 100%;
+        width: 80%;
+    }
+    input, button {
+        display: inline;
+        margin-top:13px;
+        border:none;
+        padding: 4px;
+        font-size: $font-small;
+        background-color: #fff;
     }
 }
 
 #settings-nav {
     float: right;
+    width: $single-grid;
+    margin-left: 1.5rem;
     text-align: center;
     font-size: $font-small;
+    position: relative;
     nav {
         display: none;
         background-color: #fff;
+        position: absolute;
+        left:0;
+        right:0;
+        z-index: 999;
+        -webkit-box-shadow: 0 0 4px #bbbbbb;
+           -moz-box-shadow: 0 0 4px #bbbbbb;
+                box-shadow: 0 0 4px #bbbbbb;
         a {
             display: block;
+            color: $brand-primary;
+            padding: 6px 0;
         }
     }
     &:hover nav {

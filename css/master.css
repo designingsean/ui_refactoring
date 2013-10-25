@@ -21,14 +21,14 @@ label {
 
 #app-nav {
   background-color: #4fcc00;
-  height: 40px;
-  padding: 12px 0;
   -webkit-box-shadow: 0 0 4px #bbbbbb;
   -moz-box-shadow: 0 0 4px #bbbbbb;
   box-shadow: 0 0 4px #bbbbbb; }
   #app-nav a {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 18px 0;
+    display: inline-block; }
 
 #main-nav {
   font-size: 0.85rem;
@@ -36,24 +36,42 @@ label {
   float: left; }
   #main-nav a {
     text-align: center;
-    margin-right: 1.5rem;
-    display: block;
-    float: left; }
+    margin-right: 1.5rem; }
 
 #search-nav {
-  width: 16.66667%; }
+  width: 25%;
+  float: right; }
   #search-nav input {
-    width: 100%; }
+    width: 80%; }
+  #search-nav input, #search-nav button {
+    display: inline;
+    margin-top: 13px;
+    border: none;
+    padding: 4px;
+    font-size: 0.85rem;
+    background-color: #fff; }
 
 #settings-nav {
   float: right;
+  width: 8.33333%;
+  margin-left: 1.5rem;
   text-align: center;
-  font-size: 0.85rem; }
+  font-size: 0.85rem;
+  position: relative; }
   #settings-nav nav {
     display: none;
-    background-color: #fff; }
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    -webkit-box-shadow: 0 0 4px #bbbbbb;
+    -moz-box-shadow: 0 0 4px #bbbbbb;
+    box-shadow: 0 0 4px #bbbbbb; }
     #settings-nav nav a {
-      display: block; }
+      display: block;
+      color: #4fcc00;
+      padding: 6px 0; }
   #settings-nav:hover nav {
     display: block; }
 
