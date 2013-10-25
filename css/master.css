@@ -19,7 +19,9 @@ label {
 
 table {
   font-size: 0.85rem;
-  width: 100%; }
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 input, select {
   width: 100%;
@@ -169,6 +171,22 @@ input, select {
       padding: 6px 0; }
   #settings-nav:hover nav {
     display: block; }
+
+.table-summary th, .table-summary td {
+  text-align: left;
+  padding: 8px 3px; }
+  .table-summary th:first-child, .table-summary td:first-child {
+    text-align: center; }
+.table-summary th {
+  border-bottom: 2px solid #ddd;
+  padding-top: 0; }
+.table-summary td {
+  border-top: 1px solid #ddd; }
+.table-summary tfoot td {
+  font-weight: bold;
+  background-color: #f2f2f2; }
+  .table-summary tfoot td:first-child {
+    text-align: right; }
 
 .cf:before, .cf:after {
   content: " ";

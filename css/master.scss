@@ -45,6 +45,8 @@ label {
 table {
     font-size: $font-small;
     width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 input, select {
@@ -166,9 +168,30 @@ input, select {
     }
 }
 
-//main
-
-//sidebar
+//order table
+.table-summary {
+    th, td {
+        text-align: left;
+        padding: 8px 3px;
+        &:first-child {
+            text-align: center;
+        }
+    }
+    th {
+        border-bottom: 2px solid #ddd;
+        padding-top: 0;
+    }
+    td {
+        border-top: 1px solid #ddd;
+    }
+    tfoot td {
+        font-weight: bold;
+        background-color: #f2f2f2;
+        &:first-child {
+            text-align: right;
+        }
+    }
+}
 
 //helpers
 .cf {
