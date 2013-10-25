@@ -3,6 +3,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  color: #858585; }
+
 h1 {
   color: #4fcc00;
   font-weight: 100; }
@@ -11,7 +14,8 @@ a {
   color: #4fcc00; }
 
 label {
-  display: block; }
+  display: block;
+  margin-bottom: 3px; }
 
 .container {
   width: 90%;
@@ -24,6 +28,11 @@ label {
   -webkit-box-shadow: 0 0 4px #bbbbbb;
   -moz-box-shadow: 0 0 4px #bbbbbb;
   box-shadow: 0 0 4px #bbbbbb; }
+  #app-nav:before, #app-nav:after {
+    content: " ";
+    display: table; }
+  #app-nav:after {
+    clear: both; }
   #app-nav a {
     color: #fff;
     text-decoration: none;
@@ -75,16 +84,37 @@ label {
   #settings-nav:hover nav {
     display: block; }
 
+main {
+  width: 66.66667%;
+  float: left; }
+  main .row {
+    clear: both;
+    margin-bottom: 20px; }
+    main .row:before, main .row:after {
+      content: " ";
+      display: table; }
+    main .row:after {
+      clear: both; }
+    main .row .col {
+      width: 25%;
+      margin-right: 8.33333%;
+      float: left; }
+      main .row .col input, main .row .col select {
+        width: 100%; }
+
+aside {
+  width: 25%;
+  margin-left: 8.33333%;
+  float: left; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+.cf:after {
+  clear: both; }
+
 .float-right {
   float: right; }
 
 .float-left {
   float: left; }
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table; }
-
-.cf:after {
-  clear: both; }

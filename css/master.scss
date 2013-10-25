@@ -1,14 +1,30 @@
+//variables
 $brand-primary: #4FCC00;
-
 $single-grid: 100%/12;
-
 $font-small: 0.85rem;
 $font-large: 1.2rem;
 
+//mixins
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//basics
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+body {
+    color: #858585;
 }
 
 h1 {
@@ -22,6 +38,7 @@ a {
 
 label {
     display: block;
+    margin-bottom: 3px;
 }
 
 .container {
@@ -31,7 +48,10 @@ label {
     position: relative;
 }
 
+
+//navigation
 #app-nav {
+    @include clearfix;
     background-color: $brand-primary;
     -webkit-box-shadow: 0 0 4px #bbbbbb;
        -moz-box-shadow: 0 0 4px #bbbbbb;
@@ -98,17 +118,39 @@ label {
     }
 }
 
+//main
+main {
+    width: $single-grid*8;
+    float: left;
+    .row {
+        @include clearfix;
+        clear: both;
+        margin-bottom: 20px;
+        .col {
+            width: $single-grid*3;
+            margin-right: $single-grid;
+            float: left;
+            input, select {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//sidebar
+aside {
+    width: $single-grid*3;
+    margin-left: $single-grid;
+    float: left;
+}
+
+//helpers
+.cf {
+    @include clearfix;
+}
 .float-right {
     float: right;
 }
 .float-left {
     float: left;
-}
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-.cf:after {
-    clear: both;
 }
