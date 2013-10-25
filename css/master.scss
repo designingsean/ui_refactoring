@@ -49,10 +49,6 @@ table {
 
 input, select {
     width: 100%;
-    border: 1px solid #ddd;
-    font-size: $font-small;
-    padding: 4px;
-    height: 30px;
 }
 
 .container {
@@ -77,12 +73,6 @@ input, select {
     text-decoration: none;
     font-size: $font-small;
     padding: 12px;
-}
-
-.row {
-    @include clearfix;
-    clear: both;
-    margin-bottom: $margin-default;
 }
 
 @for $i from 1 through 12 {
@@ -122,18 +112,16 @@ input, select {
 }
 
 #search-nav {
+    width: $single-grid*3;
     float: right;
     input {
         width: 80%;
-        border:none;
     }
-    button {
+    input, button {
         display: inline;
-        color: $brand-primary;
-        margin-top:11px;
+        margin-top:13px;
         border:none;
         padding: 4px;
-        height: 30px;
         font-size: $font-small;
         background-color: #fff;
     }
@@ -141,6 +129,7 @@ input, select {
 
 #settings-nav {
     float: right;
+    width: $single-grid;
     margin-left: $margin-default;
     text-align: center;
     font-size: $font-small;
@@ -167,6 +156,19 @@ input, select {
 }
 
 //main
+main {
+    input, select {
+        border: 1px solid #ddd;
+        font-size: $font-small;
+        padding: 4px;
+        height: 30px;
+    }
+    .row {
+        @include clearfix;
+        clear: both;
+        margin-bottom: $margin-default;
+    }
+}
 
 //sidebar
 
