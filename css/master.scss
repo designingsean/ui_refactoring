@@ -1,8 +1,9 @@
 //variables
 $brand-primary: #4FCC00;
+$text-primary: #858585;
 $single-grid: 100%/12;
 $font-small: 0.85rem;
-$font-large: 1.2rem;
+$margin-default: 1.5rem;
 
 //mixins
 @mixin clearfix {
@@ -24,7 +25,7 @@ $font-large: 1.2rem;
 }
 
 body {
-    color: #858585;
+    color: $text-primary;
 }
 
 h1 {
@@ -38,7 +39,7 @@ a {
 
 label {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .container {
@@ -46,6 +47,23 @@ label {
     max-width: 992px;
     margin: 0 auto;
     position: relative;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: $brand-primary;
+    color: #fff;
+}
+
+.btn-cancel {
+    text-decoration: none;
+    font-size: $font-small;
+    padding: 12px;
 }
 
 
@@ -70,7 +88,7 @@ label {
     float:left;
     a {
         text-align: center;
-        margin-right: 1.5rem;
+        margin-right: $margin-default;
     }
 }
 
@@ -93,7 +111,7 @@ label {
 #settings-nav {
     float: right;
     width: $single-grid;
-    margin-left: 1.5rem;
+    margin-left: $margin-default;
     text-align: center;
     font-size: $font-small;
     position: relative;
@@ -122,10 +140,16 @@ label {
 main {
     width: $single-grid*8;
     float: left;
+    input, select {
+        border: 1px solid #ddd;
+        font-size: $font-small;
+        padding: 4px;
+        height: 30px;
+    }
     .row {
         @include clearfix;
         clear: both;
-        margin-bottom: 20px;
+        margin-bottom: $margin-default;
         .col {
             width: $single-grid*3;
             margin-right: $single-grid;
@@ -149,8 +173,8 @@ aside {
     @include clearfix;
 }
 .float-right {
-    float: right;
+    float: right !important;
 }
 .float-left {
-    float: left;
+    float: left !important;
 }

@@ -15,13 +15,27 @@ a {
 
 label {
   display: block;
-  margin-bottom: 3px; }
+  margin-bottom: 5px; }
 
 .container {
   width: 90%;
   max-width: 992px;
   margin: 0 auto;
   position: relative; }
+
+.btn {
+  border: none;
+  padding: 10px;
+  display: inline-block; }
+
+.btn-primary {
+  background-color: #4fcc00;
+  color: #fff; }
+
+.btn-cancel {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 12px; }
 
 #app-nav {
   background-color: #4fcc00;
@@ -87,9 +101,14 @@ label {
 main {
   width: 66.66667%;
   float: left; }
+  main input, main select {
+    border: 1px solid #ddd;
+    font-size: 0.85rem;
+    padding: 4px;
+    height: 30px; }
   main .row {
     clear: both;
-    margin-bottom: 20px; }
+    margin-bottom: 1.5rem; }
     main .row:before, main .row:after {
       content: " ";
       display: table; }
@@ -114,7 +133,7 @@ aside {
   clear: both; }
 
 .float-right {
-  float: right; }
+  float: right !important; }
 
 .float-left {
-  float: left; }
+  float: left !important; }
