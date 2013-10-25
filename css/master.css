@@ -22,7 +22,11 @@ table {
   width: 100%; }
 
 input, select {
-  width: 100%; }
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 0.85rem;
+  padding: 4px;
+  height: 30px; }
 
 .container {
   width: 90%;
@@ -43,6 +47,15 @@ input, select {
   text-decoration: none;
   font-size: 0.85rem;
   padding: 12px; }
+
+.row {
+  clear: both;
+  margin-bottom: 1.5rem; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
 
 .col-1 {
   width: 8.33333%;
@@ -120,21 +133,22 @@ input, select {
     margin-right: 1.5rem; }
 
 #search-nav {
-  width: 25%;
   float: right; }
   #search-nav input {
-    width: 80%; }
-  #search-nav input, #search-nav button {
+    width: 80%;
+    border: none; }
+  #search-nav button {
     display: inline;
-    margin-top: 13px;
+    color: #4fcc00;
+    margin-top: 11px;
     border: none;
     padding: 4px;
+    height: 30px;
     font-size: 0.85rem;
     background-color: #fff; }
 
 #settings-nav {
   float: right;
-  width: 8.33333%;
   margin-left: 1.5rem;
   text-align: center;
   font-size: 0.85rem;
@@ -155,20 +169,6 @@ input, select {
       padding: 6px 0; }
   #settings-nav:hover nav {
     display: block; }
-
-main input, main select {
-  border: 1px solid #ddd;
-  font-size: 0.85rem;
-  padding: 4px;
-  height: 30px; }
-main .row {
-  clear: both;
-  margin-bottom: 1.5rem; }
-  main .row:before, main .row:after {
-    content: " ";
-    display: table; }
-  main .row:after {
-    clear: both; }
 
 .cf:before, .cf:after {
   content: " ";
