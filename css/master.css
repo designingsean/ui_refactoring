@@ -110,6 +110,17 @@ input, select {
 .gutter {
   margin-right: 8.33333%; }
 
+.help-text {
+  color: rgba(133, 133, 133, 0.75);
+  font-style: italic;
+  font-size: small;
+  clear: both; }
+
+.is-required label, .is-required .help-text {
+  color: #f00; }
+.is-required input, .is-required select {
+  border-color: #f00; }
+
 #app-nav {
   background-color: #4fcc00;
   -webkit-box-shadow: 0 0 4px #bbbbbb;

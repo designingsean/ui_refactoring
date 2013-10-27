@@ -98,6 +98,22 @@ input, select {
     margin-right: $single-grid;
 }
 
+.help-text {
+    color: fade-out($text-primary, 0.25);
+    font-style: italic;
+    font-size: small;
+    clear: both;
+}
+
+.is-required {
+    label, .help-text {
+        color: #f00;
+    }
+    input, select {
+        border-color: #f00;
+    }
+}
+
 //navigation
 #app-nav {
     @include clearfix;

@@ -46,7 +46,7 @@
         <h1>Hireology</h1>
         <main class="col-8 gutter">
             <h2>Salary Report</h2>
-            <p>PayScale has collected over 36 million salary profiles providing updatetd compensation data for over 14,000 unique job titles. Enter the details of the position you'd like to price in order to receive your PayScale report: <a href="/files/PayScale_Sample_Report_Account_Manager.pdf" target="_blank">View Sample</a>.</p>
+            <p>PayScale has collected over 36 million salary profiles providing updatetd compensation data for over 14,000 unique job titles. Enter the details of the position you&rsquo;d like to price in order to receive your PayScale report: <a href="/files/PayScale_Sample_Report_Account_Manager.pdf" target="_blank">View Sample</a>.</p>
             <form action="/payscale_reports" method="post">
                 <input name="utf8" type="hidden" value="&#x2713;" />
                 <input name="authenticity_token" type="hidden" value="QAP3wPymiRMc0tiPaXPfmLz7O4BLyJ/jt+cKm3B8JMo=" />
@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-3 gutter">
                         <label for="payscale_report_employer_type">Employer Type</label>
-                        <select id="payscale_report_employer_type" name="payscale_report[employer_type]">
+                        <select id="payscale_report_employer_type" name="payscale_report[employer_type]" required="required" >
                             <option value="">Please select&hellip;</option>
                             <option value="Not Specified">Not Specified</option>
                             <option value="Company">Company</option>
@@ -66,6 +66,7 @@
                             <option value="Private Practice/Firm">Private Practice/Firm</option>
                             <option value="School / School District">School / School District</option>
                         </select>
+                        <div class="help-text">Required</div>
                     </div>
                     <div class="col-3 gutter">
                         <label for="payscale_report_company_size">Number of Employees</label>
@@ -73,7 +74,7 @@
                     </div>
                     <div class="col-3">
                         <label for="payscale_report_industry">Industry</label>
-                        <select id="payscale_report_industry" name="payscale_report[industry]">
+                        <select id="payscale_report_industry" name="payscale_report[industry]" required="required">
                             <option value="">Please select&hellip;</option>
                             <option value="Accounting / Auditing Firm">Accounting / Auditing Firm</option>
                             <option value="Aerospace and Defense">Aerospace and Defense</option>
@@ -126,20 +127,23 @@
                             <option value="Travel">Travel</option>
                             <option value="Veterinary Care">Veterinary Care</option>
                         </select>
+                        <div class="help-text">Required</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-3 gutter">
                         <label for="payscale_report_job_title">Job Title</label>
                         <input id="payscale_report_job_title" name="payscale_report[job_title]" required="required" size="30" type="text" value="" />
+                        <div class="help-text">Required</div>
                     </div>
                     <div class="col-3 gutter">
                         <label for="payscale_report_city">City</label>
                         <input id="payscale_report_city" name="payscale_report[city]" required="required" size="30" type="text" value="" />
+                        <div class="help-text">Required</div>
                     </div>
                     <div class="col-3">
                         <label for="payscale_report_state_id">State/Province</label>
-                        <select id="payscale_report_state_id" name="payscale_report[state_id]">
+                        <select id="payscale_report_state_id" name="payscale_report[state_id]" required="required">
                             <option value="">Please select&hellip;</option>
                             <option value="1">AL</option>
                             <option value="2">AK</option>
@@ -208,6 +212,7 @@
                             <option value="65">YT</option>
                             <option value="66">--</option>
                         </select>
+                        <div class="help-text">Required</div>
                     </div>
                 </div>
                 <div class="row">
@@ -217,7 +222,8 @@
                 </div>
                 <div class="row">
                     <label for="payscale_report_email_address">Email address where complete PayScale report should be sent</label>
-                    <input id="payscale_report_email_address" class="col-4" name="payscale_report[email_address]" required="required" size="30" type="email" value="admin@hireology.com" />
+                    <input id="payscale_report_email_address" class="col-4" name="payscale_report[email_address]" required="required" size="30" type="email" value="" />
+                    <div class="help-text">Required</div>
                 </div>
                 <div class="row">
                     <div class="col-12">
@@ -256,5 +262,6 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/master.js"></script>
 </body>
 </html>
