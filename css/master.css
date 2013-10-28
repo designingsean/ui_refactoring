@@ -229,7 +229,8 @@ input, select {
       #main-nav nav a {
         display: block;
         color: #4fcc00;
-        padding: 6px 0; }
+        padding: 6px 0;
+        text-align: center; }
     #main-nav:hover nav {
       display: block; } }
 
@@ -265,7 +266,6 @@ input, select {
     display: none;
     background-color: #fff;
     position: absolute;
-    text-align: center;
     left: 0;
     right: 0;
     z-index: 999;
@@ -275,7 +275,8 @@ input, select {
     #settings-nav nav a {
       display: block;
       color: #4fcc00;
-      padding: 6px 0; }
+      padding: 6px 0;
+      text-align: center; }
   #settings-nav:hover nav {
     display: block; }
 

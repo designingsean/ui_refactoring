@@ -18,6 +18,33 @@ $breakpoint: 681px;
     }
 }
 
+@mixin nav-box-shadow {
+    -webkit-box-shadow: 0 0 4px #bbbbbb;
+       -moz-box-shadow: 0 0 4px #bbbbbb;
+            box-shadow: 0 0 4px #bbbbbb;
+}
+
+@mixin nav-dropdown {
+    nav {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        left:0;
+        right:0;
+        z-index: 999;
+        @include nav-box-shadow;
+        a {
+            display: block;
+            color: $brand-primary;
+            padding: 6px 0;
+            text-align: center;
+        }
+    }
+    &:hover nav {
+        display: block;
+    }
+}
+
 //basics
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -136,9 +163,7 @@ input, select {
     @include clearfix;
     background-color: $brand-primary;
     position: relative;
-    -webkit-box-shadow: 0 0 4px #bbbbbb;
-       -moz-box-shadow: 0 0 4px #bbbbbb;
-            box-shadow: 0 0 4px #bbbbbb;
+    @include nav-box-shadow;
     a {
         color: #fff;
         text-decoration: none;
@@ -169,25 +194,7 @@ input, select {
         }
     }
     @media (max-width: $breakpoint) {
-        nav {
-            display: none;
-            background-color: #fff;
-            position: absolute;
-            left:0;
-            right:0;
-            z-index: 999;
-            -webkit-box-shadow: 0 0 4px #bbbbbb;
-               -moz-box-shadow: 0 0 4px #bbbbbb;
-                    box-shadow: 0 0 4px #bbbbbb;
-            a {
-                display: block;
-                color: $brand-primary;
-                padding: 6px 0;
-            }
-        }
-        &:hover nav {
-            display: block;
-        }
+        @include nav-dropdown;
     }
 }
 
@@ -222,26 +229,7 @@ input, select {
         margin: 0;
         text-align: right;
     }
-    nav {
-        display: none;
-        background-color: #fff;
-        position: absolute;
-        text-align: center;
-        left:0;
-        right:0;
-        z-index: 999;
-        -webkit-box-shadow: 0 0 4px #bbbbbb;
-           -moz-box-shadow: 0 0 4px #bbbbbb;
-                box-shadow: 0 0 4px #bbbbbb;
-        a {
-            display: block;
-            color: $brand-primary;
-            padding: 6px 0;
-        }
-    }
-    &:hover nav {
-        display: block;
-    }
+    @include nav-dropdown;
 }
 
 //order table
