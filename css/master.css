@@ -209,11 +209,11 @@ input, select {
     @media (max-width: 681px) {
       #main-nav a {
         margin: 0; } }
-  #main-nav #nav-menu {
+  #main-nav .nav-menu {
     text-align: left;
     display: none; }
     @media (max-width: 681px) {
-      #main-nav #nav-menu {
+      #main-nav .nav-menu {
         display: block; } }
   @media (max-width: 681px) {
     #main-nav nav {
