@@ -200,6 +200,7 @@ input, select {
 
 #search-nav {
     float: right;
+    width: $single-grid*4;
     @media (max-width: $breakpoint) {
         width: $single-grid*6;
     }

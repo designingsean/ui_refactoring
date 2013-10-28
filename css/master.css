@@ -235,7 +235,8 @@ input, select {
       display: block; } }
 
 #search-nav {
-  float: right; }
+  float: right;
+  width: 33.33333%; }
   @media (max-width: 681px) {
     #search-nav {
       width: 50%; } }
