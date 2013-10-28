@@ -16,6 +16,11 @@ $(function() {
             }
         });
     });
+
+    // Settings drop down menu is currently hover activated.
+    // This sets up a click/tap listener so that menu can be activated on phone.
+    // Currently set up only to fire below site's breakpoint, as firing all the time
+    //    messes up hover action
     $('.nav-menu').click(function(e) {
         e.preventDefault();
         if ($(window).width() <= 681)
