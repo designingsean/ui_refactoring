@@ -242,7 +242,9 @@ input, select {
       width: 50%; } }
   #search-nav input {
     width: 80%;
-    border: none; }
+    border: none;
+    -webkit-appearance: none;
+    border-radius: 0; }
   #search-nav .btn {
     display: inline;
     color: #4fcc00;

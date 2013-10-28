@@ -207,6 +207,8 @@ input, select {
     input {
         width: 80%;
         border:none;
+        -webkit-appearance: none;
+        border-radius: 0;
     }
     .btn {
         display: inline;
