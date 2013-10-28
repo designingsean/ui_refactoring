@@ -4,6 +4,7 @@ $text-primary: #858585;
 $single-grid: 100%/12;
 $font-small: 0.85rem;
 $margin-default: 1.5rem;
+$breakpoint: 681px;
 
 //mixins
 @mixin clearfix {
@@ -37,16 +38,16 @@ a {
     color: $brand-primary;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
 table {
     font-size: $font-small;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
 input, select {
@@ -57,11 +58,10 @@ input, select {
     height: 30px;
 }
 
-.container {
-    width: 90%;
-    max-width: 992px;
-    margin: 0 auto;
-    position: relative;
+.input-group {
+    @media (max-width: $breakpoint) {
+        margin-bottom: $margin-default;
+    }
 }
 
 .btn {
@@ -81,23 +81,6 @@ input, select {
     padding: 12px;
 }
 
-.row {
-    @include clearfix;
-    clear: both;
-    margin-bottom: $margin-default;
-}
-
-@for $i from 1 through 12 {
-    .col-#{$i} {
-        width: $single-grid * $i;
-        float: left;
-    }
-}
-
-.gutter {
-    margin-right: $single-grid;
-}
-
 .help-text {
     color: fade-out($text-primary, 0.25);
     font-style: italic;
@@ -114,10 +97,45 @@ input, select {
     }
 }
 
+.container {
+    width: 90%;
+    max-width: 992px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    @include clearfix;
+    clear: both;
+    margin-bottom: $margin-default;
+    @media (max-width: $breakpoint) {
+        margin-bottom: 0;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: $single-grid * $i;
+        float: left;
+        @media (max-width: $breakpoint) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
+.gutter {
+    margin-right: $single-grid;
+    @media (max-width: $breakpoint) {
+        margin-right: 0;
+    }
+}
+
 //navigation
 #app-nav {
     @include clearfix;
     background-color: $brand-primary;
+    position: relative;
     -webkit-box-shadow: 0 0 4px #bbbbbb;
        -moz-box-shadow: 0 0 4px #bbbbbb;
             box-shadow: 0 0 4px #bbbbbb;
@@ -131,16 +149,53 @@ input, select {
 
 #main-nav {
     font-size: $font-small;
-    text-align: center;
     float:left;
+    position: relative;
+    @media (max-width: $breakpoint) {
+        width: $single-grid*3;
+    }
     a {
         text-align: center;
         margin-right: $margin-default;
+        @media (max-width: $breakpoint) {
+            margin: 0;
+        }
+    }
+    #nav-menu {
+        text-align: left;
+        display: none;
+        @media (max-width: $breakpoint) {
+            display: block;
+        }
+    }
+    @media (max-width: $breakpoint) {
+        nav {
+            display: none;
+            background-color: #fff;
+            position: absolute;
+            left:0;
+            right:0;
+            z-index: 999;
+            -webkit-box-shadow: 0 0 4px #bbbbbb;
+               -moz-box-shadow: 0 0 4px #bbbbbb;
+                    box-shadow: 0 0 4px #bbbbbb;
+            a {
+                display: block;
+                color: $brand-primary;
+                padding: 6px 0;
+            }
+        }
+        &:hover nav {
+            display: block;
+        }
     }
 }
 
 #search-nav {
     float: right;
+    @media (max-width: $breakpoint) {
+        width: $single-grid*6;
+    }
     input {
         width: 80%;
         border:none;
@@ -162,10 +217,16 @@ input, select {
     text-align: center;
     font-size: $font-small;
     position: relative;
+    @media (max-width: $breakpoint) {
+        width: $single-grid*3;
+        margin: 0;
+        text-align: right;
+    }
     nav {
         display: none;
         background-color: #fff;
         position: absolute;
+        text-align: center;
         left:0;
         right:0;
         z-index: 999;

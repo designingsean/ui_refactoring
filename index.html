@@ -22,10 +22,13 @@
     <header id="app-nav">
         <div class="container">
             <nav id="main-nav">
-                <a href="/welcome">Welcome</a>
-                <a href="/jobs">Jobs</a>
-                <a href="/candidates">Candidates</a>
-                <a href="/tasks">Tasks</a>
+                <a href="#" id="nav-menu">Menu</a>
+                <nav>
+                    <a href="/welcome">Welcome</a>
+                    <a href="/jobs">Jobs</a>
+                    <a href="/candidates">Candidates</a>
+                    <a href="/tasks">Tasks</a>
+                </nav>
             </nav>
             <nav id="settings-nav">
                 <a href="/company_profiles/edit_company_profile"><i class="fa fa-cog"></i> Settings</a>
@@ -52,7 +55,7 @@
                 <input name="authenticity_token" type="hidden" value="QAP3wPymiRMc0tiPaXPfmLz7O4BLyJ/jt+cKm3B8JMo=" />
                 <input id="suggested_jobs" name="suggested_jobs" type="hidden" />
                 <div class="row">
-                    <div class="col-3 gutter">
+                    <div class="col-3 gutter input-group">
                         <label for="payscale_report_employer_type">Employer Type</label>
                         <select id="payscale_report_employer_type" name="payscale_report[employer_type]" required="required" >
                             <option value="">Please select&hellip;</option>
@@ -68,11 +71,11 @@
                         </select>
                         <div class="help-text">Required</div>
                     </div>
-                    <div class="col-3 gutter">
+                    <div class="col-3 gutter input-group">
                         <label for="payscale_report_company_size">Number of Employees</label>
                         <input id="payscale_report_company_size" name="payscale_report[company_size]" size="30" type="number" value="" />
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 input-group">
                         <label for="payscale_report_industry">Industry</label>
                         <select id="payscale_report_industry" name="payscale_report[industry]" required="required">
                             <option value="">Please select&hellip;</option>
@@ -131,17 +134,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3 gutter">
+                    <div class="col-3 gutter input-group">
                         <label for="payscale_report_job_title">Job Title</label>
                         <input id="payscale_report_job_title" name="payscale_report[job_title]" required="required" size="30" type="text" value="" />
                         <div class="help-text">Required</div>
                     </div>
-                    <div class="col-3 gutter">
+                    <div class="col-3 gutter input-group">
                         <label for="payscale_report_city">City</label>
                         <input id="payscale_report_city" name="payscale_report[city]" required="required" size="30" type="text" value="" />
                         <div class="help-text">Required</div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 input-group">
                         <label for="payscale_report_state_id">State/Province</label>
                         <select id="payscale_report_state_id" name="payscale_report[state_id]" required="required">
                             <option value="">Please select&hellip;</option>
@@ -216,14 +219,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <label for="payscale_report_years_of_experience">Years of Experience in Field/Career<br>
-                    <em>Estimate the total years of experience in the field your desired candidate would have.</em></label>
-                    <input id="payscale_report_years_of_experience" class="col-2" maxlength="3" name="payscale_report[years_of_experience]" size="3" type="number" value="" />
+                    <div class="col-12 input-group">
+                        <label for="payscale_report_years_of_experience">Years of Experience in Field/Career<br>
+                        <span class="help-text">Estimate the total years of experience in the field your desired candidate would have.</span></label>
+                        <input id="payscale_report_years_of_experience" class="col-2" maxlength="3" name="payscale_report[years_of_experience]" size="3" type="number" value="" />
+                    </div>
                 </div>
                 <div class="row">
-                    <label for="payscale_report_email_address">Email address where complete PayScale report should be sent</label>
-                    <input id="payscale_report_email_address" class="col-4" name="payscale_report[email_address]" required="required" size="30" type="email" value="" />
-                    <div class="help-text">Required</div>
+                    <div class="col-12 input-group">
+                        <label for="payscale_report_email_address">Email address where complete PayScale report should be sent</label>
+                        <input id="payscale_report_email_address" class="col-4" name="payscale_report[email_address]" required="required" size="30" type="email" value="" />
+                        <div class="help-text">Required</div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
