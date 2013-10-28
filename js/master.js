@@ -16,4 +16,9 @@ $(function() {
             }
         });
     });
+    $('.nav-menu').click(function(e) {
+        e.preventDefault();
+        if ($(window).width() <= 681)
+            $(this).next('nav').toggle();
+    });
 });
